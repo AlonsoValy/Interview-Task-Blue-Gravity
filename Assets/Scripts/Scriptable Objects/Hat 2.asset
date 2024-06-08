@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e913277973a52724f8fca2078da4b6b4, type: 3}
+  m_Name: Hat 2
+  m_EditorClassIdentifier: 
+  partName: Wizard Hat
+  animationID: 2
+  partAnimations:
+  - {fileID: 7400000, guid: 61312b73bb86d2d4590fcb211537d6c9, type: 2}
+  - {fileID: 7400000, guid: 2ddcfc610e39f0c42bcef6e0837bee9b, type: 2}
+  - {fileID: 7400000, guid: becb0100c6ffa4942b4d83c77910def3, type: 2}
+  - {fileID: 7400000, guid: d14c58897e3edd549b67345c64a5c574, type: 2}
+  - {fileID: 7400000, guid: 33bf43b017a3b8649a3af56bf607f96f, type: 2}
+  - {fileID: 7400000, guid: 0cda9cc9eca69bc438441f94a03abebe, type: 2}
+  - {fileID: 7400000, guid: 1ba36250a970b284ab3788e91da43995, type: 2}
+  - {fileID: 7400000, guid: d055037877c24f3458c1f46fd30d2b09, type: 2}
