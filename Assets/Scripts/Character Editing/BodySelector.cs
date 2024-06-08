@@ -20,13 +20,13 @@ public class BodySelector : MonoBehaviour
     private void GetCurrentParts(int index)
     {
         //Get name and ID for UI and anims
-        partSelections[index].NamePartTextComponent.text = character.characterParts[index].part.partName;
+        //partSelections[index].NamePartTextComponent.text = character.characterParts[index].part.partName;
         partSelections[index].partCurrentIndex = character.characterParts[index].part.animationID;
     }
     private void UpdatePart(int index)
     {
         //Update UI text and part in the body
-        partSelections[index].NamePartTextComponent.text = partSelections[index].partOptions[partSelections[index].partCurrentIndex].partName;
+        //partSelections[index].NamePartTextComponent.text = partSelections[index].partOptions[partSelections[index].partCurrentIndex].partName;
         character.characterParts[index].part = partSelections[index].partOptions[partSelections[index].partCurrentIndex];
     }
     private bool Validate(int index)
