@@ -16,15 +16,19 @@ public class ShopKeeper : MonoBehaviour
             //This has to be specific
             thingsToShow[0].SetActive(true);
             interact.SetActive(false);
+            AudioManager.instance.PlayOneshotSFX(AudioManager.AudioSamples.shopKeeperHum);
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-       if (!interactIsActive)
-       {
-            interact.SetActive(true);
-            interactIsActive = true;
-       }
+       
+            if (!interactIsActive && collision.tag.Equals("Player"))
+            {
+                interact.SetActive(true);
+                interactIsActive = true;
+            }
+        
+      
      
     }
 

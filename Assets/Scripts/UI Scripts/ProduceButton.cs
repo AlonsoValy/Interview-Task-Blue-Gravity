@@ -46,7 +46,7 @@ public class ProduceButton : MonoBehaviour
                 It.transform.GetChild(2).GetComponent<Text>().text = item.value.ToString() + "$";
                 It.GetComponent<Button>().AddEventListener(item, inventoryManager.SellItem);
                 It.GetComponent<Button>().onClick.AddListener(cleanPanel);
-
+                It.GetComponent<Button>().onClick.AddListener(() => AudioManager.instance.PlayOneshotSFX(AudioManager.AudioSamples.itemSold));
                 It.GetComponent<Button>().onClick.AddListener(UpDatePanel);
 
                 inButtons.Add(It);
@@ -68,7 +68,7 @@ public class ProduceButton : MonoBehaviour
                 It.transform.GetChild(2).GetComponent<Text>().text = item.value.ToString() + "$";
                 It.GetComponent<Button>().AddEventListener(item, shopManager.SellItem);
                 It.GetComponent<Button>().onClick.AddListener(cleanPanel);
-
+                It.GetComponent<Button>().onClick.AddListener(() => AudioManager.instance.PlayOneshotSFX(AudioManager.AudioSamples.itemBought));
                 It.GetComponent<Button>().onClick.AddListener(UpDatePanel);
 
                 inButtons.Add(It);

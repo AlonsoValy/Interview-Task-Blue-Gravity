@@ -8,12 +8,11 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 4f;
     private Rigidbody2D myRigidbody;
     private Vector3 playerMovement;
-    private Animator animator;
+    [SerializeField] Animator bodyAnimator,outfitAnimator,hairAnimator;
 
     private void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -23,19 +22,35 @@ public class PlayerMovement : MonoBehaviour
         playerMovement.y = Input.GetAxisRaw("Vertical");
         UpdateAnimationAndMove();
     }
+   
 
     private void UpdateAnimationAndMove()
     {
         if (playerMovement != Vector3.zero)
         {
             MoveCharacter();
-            animator.SetFloat("moveX", playerMovement.x);
-            animator.SetFloat("moveY", playerMovement.y);
-            animator.SetBool("moving", true);
+            bodyAnimator.SetFloat("moveX", playerMovement.x);
+            bodyAnimator.SetFloat("moveY", playerMovement.y);
+            bodyAnimator.SetBool("moving", true);
+            outfitAnimator.SetFloat("moveX", playerMovement.x);
+            outfitAnimator.SetFloat("moveY", playerMovement.y);
+            outfitAnimator.SetBool("moving", true);
+            hairAnimator.SetFloat("moveX", playerMovement.x);
+            hairAnimator.SetFloat("moveY", playerMovement.y);
+            hairAnimator.SetBool("moving", true);
+            if (!AudioManager.instance.SFXSource.isPlaying)
+            {
+               
+                AudioManager.instance.PlayOneshotSFX(AudioManager.AudioSamples.steps);
+            }
         }
         else
         {
-            animator.SetBool("moving", false);
+          
+            bodyAnimator.SetBool("moving", false);
+            outfitAnimator.SetBool("moving",false);
+            hairAnimator.SetBool("moving", false) ;
+            
         }
     }
 

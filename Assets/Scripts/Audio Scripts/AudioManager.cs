@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class AudioManager : MonoBehaviour
 {
     //All of this script it's imported, from a project made in the GGJam 2024, and slightly modified
-    [SerializeField] SounDataBank soundDB;
+    public SounDataBank soundDB;
     [SerializeField] float FadeTime;
     public float TargetVolume;
     public SounDataBank AudioDataBank => soundDB;
