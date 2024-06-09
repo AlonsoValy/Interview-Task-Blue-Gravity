@@ -8,12 +8,13 @@ public class AudioManager : MonoBehaviour
 {
     //All of this script it's imported, from a project made in the GGJam 2024, and slightly modified
     [SerializeField] SounDataBank soundDB;
-    [SerializeField] float FadeTime, TargetVolume;
+    [SerializeField] float FadeTime;
+    public float TargetVolume;
     public SounDataBank AudioDataBank => soundDB;
     public AudioMixer Mixer;
     public AudioSource SFXSource, musicSource;
     public static AudioManager instance = null;
-    public enum AudioSamples
+    public enum AudioSamples : int
     {
         mainMenuTheme = 0, shopTheme = 1, itemSold = 2, itemBought = 3, shopKeeperHum = 4, steps = 5, buttonPressOne = 6,
         buttonPressTwo = 7
