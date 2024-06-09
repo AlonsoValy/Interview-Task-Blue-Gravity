@@ -13,7 +13,8 @@ public class ShopKeeper : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             interactIsActive = true;
-            thingsToShow[0].SetActive(true);          
+            //This has to be specific
+            thingsToShow[0].SetActive(true);
             interact.SetActive(false);
         }
     }
